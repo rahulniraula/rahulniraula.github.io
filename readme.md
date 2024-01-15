@@ -8,5 +8,6 @@ As a part of cloud computing course work, this project has been created. The tem
 | Date | Patriculars |
 |--|--|
 | 01/13/2024 | Template finalized from colorlib.com |
+| 01/14/2024 | Index Page Finalized, contact me, blog added |
 
 
