@@ -268,6 +268,49 @@
 
     fixedContentPos: false
   });
+  $("#contact-form").submit(function(e){
+	let a=$("#contact-form label").addClass("hide");
+	console.log(a);
+	e.preventDefault();
+	let messageTitle=$("#messageTitle").val();
+	let message=$("#message").val();
+	let email=$("#email").val();
+	let guestName=$("#guestName").val();
+	let phoneNumber=$("#phoneNumber").val();
+	if(messageTitle=="" ){
+		$("#messageTitle+label").removeClass("hide");
+	}
+	if(message=="" ){
+		$("#message+label").removeClass("hide");
+	}
+	if(email=="" ){
+		$("#email+label").removeClass("hide");
+	}
+	if(guestName=="" ){
+		$("#guestName+label").removeClass("hide");
+	}
+	if(messageTitle=="" || message=="" || email=="" || guestName==""){
+		return false;
+	}
+	let obj={messageTitle,message,email,guestName,phoneNumber};
+	$.ajax({
+		url:"https://g5kpf4i2utnstnmqlitjmtisoe0xtepo.lambda-url.us-east-1.on.aws/",
+		method:"POST",
+		contentType: "application/json",
+		data:JSON.stringify(obj)
+	})
+	.done(function(msg){
+		alert("Message successfully sent.");
+		$("#contact-form input").val("");
+		$("#contact-form textarea").val("")
+	})
+	.error(function(msg){
+		alert("An error occured when sending message");
+		console.log("Error received");
+		console.log(msg);
+	})
+	
+  })
 
 
 
