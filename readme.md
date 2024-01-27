@@ -18,5 +18,6 @@ As a part of cloud computing course work, this project has been created. The tem
 | 01/14/2024 | Index Page Finalized, contact me, blog added |
 | 01/19/2024 | github Actions Added for auto deployment to s3 |
 | 01/20/2024 | Integrated SNS with Lamda to trigger email to user |
+| 01/26/2024 | DynamonoDB integrated to store sent messages from website |
 
 
