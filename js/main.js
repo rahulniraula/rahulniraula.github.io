@@ -294,7 +294,7 @@
 	}
 	let obj={messageTitle,message,email,guestName,phoneNumber};
 	$.ajax({
-		url:"https://g5kpf4i2utnstnmqlitjmtisoe0xtepo.lambda-url.us-east-1.on.aws/",
+		url:"https://api.geeklearners.com/myNodeLamdaFunction",
 		method:"POST",
 		contentType: "application/json",
 		data:JSON.stringify(obj)
