@@ -3,7 +3,7 @@
 As a part of cloud computing course work, this project has been created. The template for this project has been taken from colorlib. The images used in this website are created using DALL. E3.
 
 ## Overall Project Structure
-![alt text](./images/arch.drawio.svg)
+![Overall Project Structure](./images/arch.drawio.svg)
 ## Used Github Features
 * Github Actions to auto upload to S3
 ## Used AWS Features
