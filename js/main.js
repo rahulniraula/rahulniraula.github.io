@@ -293,22 +293,28 @@
 		return false;
 	}
 	let obj={messageTitle,message,email,guestName,phoneNumber};
-	$.ajax({
-		url:"https://api.geeklearners.com/myNodeLamdaFunction",
-		method:"POST",
-		contentType: "application/json",
-		data:JSON.stringify(obj)
-	})
-	.done(function(msg){
-		alert("Message successfully sent.");
+
+	fetch("https://api.geeklearners.com/myNodeLamdaFunction",
+		{
+			headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+			},
+			method: "POST",
+			body: JSON.stringify(obj)
+		}).then(
+			function(){
+					alert("Message successfully sent.");
 		$("#contact-form input").val("");
 		$("#contact-form textarea").val("")
-	})
-	.error(function(msg){
-		alert("An error occured when sending message");
+			}
+		)
+		.catch(function(){
+			alert("An error occured when sending message");
 		console.log("Error received");
 		console.log(msg);
-	})
+		})
+	
 	
   })
 
